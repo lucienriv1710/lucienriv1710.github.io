@@ -1,0 +1,98 @@
+/* ---------- Boutons ---------- */
+.btn {
+  --btn-pad-y: 0.95em;
+  --btn-pad-x: 1.55em;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  padding: var(--btn-pad-y) var(--btn-pad-x);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1;
+  white-space: nowrap;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    box-shadow 0.35s var(--ease-out),
+    border-color 0.35s,
+    background-color 0.35s,
+    color 0.35s;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.4s var(--ease-out);
+  }
+
+  &:hover svg {
+    transform: translateY(2px);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.btn--small {
+  --btn-pad-y: 0.7em;
+  --btn-pad-x: 1.2em;
+  font-size: 0.88rem;
+}
+
+.btn--primary {
+  background: var(--grad);
+  color: #0a0a12;
+
+  /* Reflet qui balaie le bouton au survol */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / 0.45) 50%, transparent 70%);
+    translate: -110% 0;
+    transition: translate 0.8s var(--ease-out);
+  }
+
+  &:hover {
+    box-shadow: var(--glow);
+
+    &::after {
+      translate: 110% 0;
+    }
+  }
+}
+
+.btn--ghost {
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  &:hover {
+    border-color: var(--accent);
+    background: rgb(139 92 246 / 0.1);
+  }
+}
+
+/* Éléments "magnétiques" : translate géré en JS via --tx / --ty */
+[data-magnetic] {
+  translate: var(--tx, 0) var(--ty, 0);
+  transition: translate 0.5s var(--ease-out);
+
+  &.is-magnet {
+    transition: translate 0.12s linear;
+  }
+}

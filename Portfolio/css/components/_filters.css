@@ -1,0 +1,78 @@
+/* ---------- Filtres de projets ---------- */
+.filters {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 36px;
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgb(14 14 25 / 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Pastille qui glisse sous le filtre actif */
+.filters__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 999px;
+  background: var(--grad);
+  box-shadow: var(--glow);
+  transition:
+    translate 0.55s var(--ease-out),
+    width 0.55s var(--ease-out),
+    height 0.55s var(--ease-out);
+}
+
+.filter {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.6em 1.1em;
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--text);
+  }
+
+  &[aria-pressed="true"] {
+    color: #0a0a12;
+    font-weight: 600;
+  }
+}
+
+.filter__count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.6em;
+  height: 1.6em;
+  padding-inline: 0.35em;
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  transition: background 0.3s;
+
+  .filter[aria-pressed="true"] & {
+    background: rgb(10 10 18 / 0.18);
+  }
+}

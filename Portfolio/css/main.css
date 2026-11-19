@@ -1,0 +1,31 @@
+/* =========================================================
+   Point d'entrée des styles
+   Organisation inspirée de l'architecture SCSS (partials),
+   en CSS natif moderne : @layer, nesting, custom properties.
+   ========================================================= */
+
+/* Ordre des couches : la dernière l'emporte (layout surcharge components) */
+@layer tokens, base, components, layout, sections, utilities;
+
+@import url("base/_tokens.css") layer(tokens);
+@import url("base/_reset.css") layer(base);
+@import url("base/_typography.css") layer(base);
+
+@import url("layout/_container.css") layer(layout);
+@import url("layout/_nav.css") layer(layout);
+@import url("layout/_footer.css") layer(layout);
+
+@import url("components/_background.css") layer(components);
+@import url("components/_cursor.css") layer(components);
+@import url("components/_buttons.css") layer(components);
+@import url("components/_project-card.css") layer(components);
+@import url("components/_filters.css") layer(components);
+@import url("components/_form.css") layer(components);
+
+@import url("sections/_hero.css") layer(sections);
+@import url("sections/_marquee.css") layer(sections);
+@import url("sections/_projects.css") layer(sections);
+@import url("sections/_cv.css") layer(sections);
+@import url("sections/_contact.css") layer(sections);
+
+@import url("utilities/_animations.css") layer(utilities);

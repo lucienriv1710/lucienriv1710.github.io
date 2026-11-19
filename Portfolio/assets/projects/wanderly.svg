@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#161735"/><stop offset="1" stop-color="#082f42"/></linearGradient>
+    <linearGradient id="route" x1="180" y1="310" x2="580" y2="115"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="28" fill="url(#bg)"/>
+  <path d="M0 115h800M0 390h800" stroke="#fff" stroke-opacity=".08"/>
+  <rect x="34" y="34" width="732" height="382" rx="22" fill="#101426" stroke="#fff" stroke-opacity=".13"/>
+  <rect x="34" y="34" width="732" height="58" rx="22" fill="#171c30"/>
+  <circle cx="65" cy="63" r="7" fill="#a78bfa"/><text x="84" y="69" fill="#f3f4f6" font-family="Arial,sans-serif" font-size="18" font-weight="700">Wanderly</text>
+  <rect x="535" y="51" width="104" height="24" rx="12" fill="#fff" fill-opacity=".08"/><circle cx="657" cy="63" r="12" fill="#22d3ee" fill-opacity=".75"/>
+  <rect x="54" y="112" width="205" height="282" rx="15" fill="#1c2438"/>
+  <text x="76" y="150" fill="#f8fafc" font-family="Arial,sans-serif" font-size="19" font-weight="700">Ton prochain voyage</text>
+  <text x="76" y="176" fill="#aab5cb" font-family="Arial,sans-serif" font-size="13">3 étapes · 8 jours</text>
+  <rect x="76" y="201" width="161" height="48" rx="10" fill="#293249"/><circle cx="96" cy="225" r="7" fill="#a78bfa"/><text x="113" y="230" fill="#f8fafc" font-family="Arial,sans-serif" font-size="14">Paris</text>
+  <rect x="76" y="261" width="161" height="48" rx="10" fill="#293249"/><circle cx="96" cy="285" r="7" fill="#22d3ee"/><text x="113" y="290" fill="#f8fafc" font-family="Arial,sans-serif" font-size="14">Annecy</text>
+  <rect x="76" y="321" width="161" height="48" rx="10" fill="#293249"/><circle cx="96" cy="345" r="7" fill="#fbbf24"/><text x="113" y="350" fill="#f8fafc" font-family="Arial,sans-serif" font-size="14">Chamonix</text>
+  <rect x="278" y="112" width="468" height="282" rx="15" fill="#17283a"/>
+  <path d="M300 180c73-45 114 28 180-4s91-70 142-18 83 11 106-26M300 338c61-42 119 9 180-21s104-44 152-7 75 13 96-20M376 126c-16 66 44 76 21 128s-7 83 21 126M650 125c-34 61-1 104-31 147s-16 78-8 117" stroke="#92b9c9" stroke-opacity=".18" stroke-width="2"/>
+  <path d="M351 315c44-76 86-102 146-81 48 17 70-55 124-72" stroke="url(#route)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 12"/>
+  <circle cx="351" cy="315" r="13" fill="#a78bfa"/><circle cx="497" cy="234" r="13" fill="#22d3ee"/><circle cx="621" cy="162" r="13" fill="#fbbf24"/>
+  <circle cx="351" cy="315" r="22" stroke="#a78bfa" stroke-opacity=".35" stroke-width="2"/><circle cx="621" cy="162" r="22" stroke="#fbbf24" stroke-opacity=".35" stroke-width="2"/>
+</svg>

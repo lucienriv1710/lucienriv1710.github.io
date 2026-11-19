@@ -1,0 +1,99 @@
+/* ---------- Section CV ---------- */
+.cv__grid {
+  display: grid;
+  gap: 56px;
+  align-items: center;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+  }
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 22px;
+  margin-block: 32px 36px;
+  padding-left: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 6px;
+    width: 1.5px;
+    background: linear-gradient(var(--accent), var(--accent-2), transparent);
+  }
+}
+
+.timeline__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -28px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 4px rgb(139 92 246 / 0.15);
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    margin-block: 2px 4px;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.93rem;
+  }
+}
+
+.timeline__item--future::before {
+  border-style: dashed;
+  border-color: var(--accent-2);
+  animation: pulse-ring 2.2s var(--ease-out) infinite;
+}
+
+.timeline__date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--accent-2);
+}
+
+.cv__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Aperçu du CV */
+.cv__preview {
+  display: block;
+  width: min(100%, 400px);
+  margin-inline: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-lg), 0 0 80px -30px var(--accent-2);
+  overflow: hidden;
+  transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) rotate(-2deg);
+  transition: transform 0.7s var(--ease-out);
+
+  .is-tilting & {
+    transform: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry)) rotate(0deg) scale(1.02);
+    transition: transform 0.15s linear;
+  }
+}
+
+.cv__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

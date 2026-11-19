@@ -1,0 +1,52 @@
+/* ---------- Layout global ---------- */
+.container {
+  width: min(100% - var(--gutter) * 2, var(--container));
+  margin-inline: auto;
+}
+
+main,
+.footer,
+.nav {
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(80px, 12vw, 140px);
+}
+
+.section__head {
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  padding: 0.6em 1em;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-150%);
+  transition: transform 0.2s;
+
+  &:focus {
+    transform: none;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Les enfants de grilles ne doivent jamais forcer un débordement horizontal */
+:where(.hero__grid, .cv__grid, .contact__grid, .projects__grid) > * {
+  min-width: 0;
+}

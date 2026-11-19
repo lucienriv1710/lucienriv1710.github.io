@@ -1,0 +1,67 @@
+/* ---------- Apparition au scroll ---------- */
+/* Uniquement si le JS est actif : sans JS, tout reste visible. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.9s var(--ease-out),
+    transform 0.9s var(--ease-out);
+  transition-delay: calc(var(--d, 0) * 90ms);
+
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes gradient-pan {
+  to { background-position: 200% center; }
+}
+
+@keyframes ping {
+  75%, 100% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgb(34 211 238 / 0.45); }
+  100% { box-shadow: 0 0 0 12px rgb(34 211 238 / 0); }
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+@keyframes float {
+  50% { translate: 0 -12px; }
+}
+
+@keyframes scroll-hint {
+  0% { opacity: 0; transform: translateY(0); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(14px); }
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- Accessibilité : mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

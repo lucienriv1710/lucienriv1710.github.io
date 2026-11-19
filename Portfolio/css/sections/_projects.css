@@ -1,0 +1,10 @@
+/* ---------- Section projets ---------- */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 24px;
+}
+
+.projects__noscript {
+  color: var(--text-muted);
+}
