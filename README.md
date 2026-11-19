@@ -12,9 +12,8 @@ Avec VS Code : extension **Live Server** → clic droit sur `index.html` → *Op
 ## À personnaliser
 | Quoi | Où |
 |---|---|
-| Nom, initiales, liens LinkedIn/GitHub | `index.html` (rechercher `Prénom`, `PN`, `ton-profil`, `ton-pseudo`) |
-| Projets (texte, stack, couleurs, liens) | `js/data/projects.js` |
-| Couvertures illustratives des projets | `assets/projects/` |
+| Nom, initiales, liens de contact | `index.html` |
+| Projets (texte, stack, liens et captures) | `js/data/projects.js` |
 | Catégories de filtres | `CATEGORIES` dans `js/data/projects.js` |
 | Aperçu du CV | remplacer `CV-Lucien-Riviere.jpeg` (garder le nom) |
 | CV à télécharger | remplacer `assets/cv/CV.pdf` (garder le nom) |
@@ -42,7 +41,9 @@ js/
   data/        projects.js, icons.js
   modules/     background, cursor (+ magnétique), tilt, projects (filtres FLIP), contact, ui
 assets/cv/CV.pdf
-assets/projects/              → illustrations des couvertures de projets
+tria28.png, astbad.png,
+resonances.png, culture.png,
+bloom.png                     → captures des projets
 ```
 
 ## Accessibilité & perfs

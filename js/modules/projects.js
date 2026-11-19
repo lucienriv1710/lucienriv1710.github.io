@@ -176,7 +176,7 @@ function cardTemplate(project, index) {
     <article class="project-card" data-categories="${categories.join(' ')}" data-tilt data-tilt-max="7" data-cursor-label="Voir">
       <div class="project-card__inner" data-tilt-inner style="--c1: ${colors[0]}; --c2: ${colors[1]};">
         <div class="project-card__visual">
-          <img class="project-card__cover" src="${image}" alt="Illustration de couverture du projet ${title}" loading="lazy">
+          <img class="project-card__cover" src="${image}" alt="Capture d’écran du projet ${title}" loading="lazy">
           <span class="project-card__index">${num}</span>
           <span class="project-card__year">${year}</span>
         </div>
